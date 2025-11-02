@@ -67,7 +67,7 @@ header span {
 .navigation a {
   display: block;
   padding: .8rem 10px;
-  color: var(--color-font2);
+  color: var(--color-font1);
   text-decoration: none;
   border-bottom: solid 1px var(--font-color2);
   font-weight: bold;
@@ -77,6 +77,7 @@ header span {
 
 .navigation li.current {
   background-color: var(--color-accent);
+  color: var(--color-font);
 }
 
 .navigation a:hover {
@@ -152,6 +153,7 @@ h2 {
 
 .course-buttons button:hover {
   background-color: var(--color-accent);
+  color: var(--color-font)
 }
 
 #totalCourses {
@@ -182,13 +184,13 @@ h2 {
 
 .course-btn:hover {
   background-color: var(--color-accent);
-  color: var(--color-font2);
+  color: var(--color-font);
 }
 
 
 .completed {
   background-color: var(--color-accent);
-  color: var(--color-font2);
+  color: var(--color-font);
 }
 
 .completed::before {
