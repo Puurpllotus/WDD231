@@ -34,8 +34,8 @@ header {
 
 .site-title {
   font-family: 'Playfair Display', serif;
-  font-size: 1.5rem;
-  flex-grow: 1;
+  font-size: 2rem;
+  flex-grow: 1;   
 }
 
 .hamburger {
@@ -142,6 +142,9 @@ h1, h2 {
   display: flex;
   align-items: center;
   gap: 1rem;
+}
+#members.list img {
+  display: none;
 }
 
 .member-card {

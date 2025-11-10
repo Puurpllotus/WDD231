@@ -1,19 +1,19 @@
 [
   {
-    "name": "SuperMart",
+    "name": "Estridos Beauty Spa",
     "address": "101 Main St",
     "phone": "555-1234",
-    "website": "https://supermart.com",
-    "image": "supermart.png",
+    "website": "https://stridosspa.com",
+    "image": "estridos-spa.webp",
     "membership": 3,
     "description": "Your neighborhood grocery store."
   },
   {
-    "name": "Bright Bank",
+    "name": "Take Food",
     "address": "202 Market Ave",
     "phone": "555-5678",
     "website": "https://brightbank.com",
-    "image": "brightbank.png",
+    "image": "takefood.webp",
     "membership": 2,
     "description": "Modern banking solutions."
   },
@@ -22,7 +22,7 @@
     "address": "303 Flower Rd",
     "phone": "555-2468",
     "website": "https://greengardens.com",
-    "image": "greengardens.png",
+    "image": "green-garden.webp",
     "membership": 1,
     "description": "Landscaping and garden center."
   },
@@ -31,16 +31,16 @@
     "address": "404 Silicon Blvd",
     "phone": "555-3698",
     "website": "https://techtitans.com",
-    "image": "techtitans.png",
+    "image": "tech-titan.webp",
     "membership": 3,
     "description": "IT consulting and hardware."
   },
   {
-    "name": "Family Fitness",
+    "name": "Efc Gym",
     "address": "505 Workout Lane",
     "phone": "555-6543",
-    "website": "https://familyfitness.com",
-    "image": "familyfitness.png",
+    "website": "https://efcfitness.com",
+    "image": "efc-gym.webp",
     "membership": 2,
     "description": "Fitness center for all ages."
   },
@@ -49,17 +49,17 @@
     "address": "606 Library Ave",
     "phone": "555-8520",
     "website": "https://booknook.com",
-    "image": "booknook.png",
+    "image": "booknook.webp",
     "membership": 1,
     "description": "Cozy local bookstore."
   },
   {
-    "name": "Civic Care",
+    "name": "Fresh Market",
     "address": "707 Civic St",
     "phone": "555-7410",
-    "website": "https://civiccare.com",
-    "image": "civiccare.png",
+    "website": "https://freshmarket.com",
+    "image": "fresh-market.webp",
     "membership": 1,
-    "description": "Community outreach and non-profit services."
+    "description": "Fresh organic Vegetables and fruits."
   }
 ]
