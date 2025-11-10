@@ -1,0 +1,65 @@
+[
+  {
+    "name": "SuperMart",
+    "address": "101 Main St",
+    "phone": "555-1234",
+    "website": "https://supermart.com",
+    "image": "supermart.png",
+    "membership": 3,
+    "description": "Your neighborhood grocery store."
+  },
+  {
+    "name": "Bright Bank",
+    "address": "202 Market Ave",
+    "phone": "555-5678",
+    "website": "https://brightbank.com",
+    "image": "brightbank.png",
+    "membership": 2,
+    "description": "Modern banking solutions."
+  },
+  {
+    "name": "Green Gardens",
+    "address": "303 Flower Rd",
+    "phone": "555-2468",
+    "website": "https://greengardens.com",
+    "image": "greengardens.png",
+    "membership": 1,
+    "description": "Landscaping and garden center."
+  },
+  {
+    "name": "Tech Titans",
+    "address": "404 Silicon Blvd",
+    "phone": "555-3698",
+    "website": "https://techtitans.com",
+    "image": "techtitans.png",
+    "membership": 3,
+    "description": "IT consulting and hardware."
+  },
+  {
+    "name": "Family Fitness",
+    "address": "505 Workout Lane",
+    "phone": "555-6543",
+    "website": "https://familyfitness.com",
+    "image": "familyfitness.png",
+    "membership": 2,
+    "description": "Fitness center for all ages."
+  },
+  {
+    "name": "Book Nook",
+    "address": "606 Library Ave",
+    "phone": "555-8520",
+    "website": "https://booknook.com",
+    "image": "booknook.png",
+    "membership": 1,
+    "description": "Cozy local bookstore."
+  },
+  {
+    "name": "Civic Care",
+    "address": "707 Civic St",
+    "phone": "555-7410",
+    "website": "https://civiccare.com",
+    "image": "civiccare.png",
+    "membership": 1,
+    "description": "Community outreach and non-profit services."
+  }
+]
