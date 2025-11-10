@@ -15,7 +15,7 @@ window.addEventListener('resize', () => {
   }
 });
 
-// Directory Grid/List Toggle
+
 const gridBtn = document.getElementById('gridView');
 const listBtn = document.getElementById('listView');
 const membersSection = document.getElementById('members');
@@ -29,6 +29,6 @@ listBtn.addEventListener('click', () => {
   membersSection.classList.remove('grid');
 });
 
-// Footer Date
+
 document.getElementById('currentyear').textContent = new Date().getFullYear();
 document.getElementById('lastModified').textContent = document.lastModified;
