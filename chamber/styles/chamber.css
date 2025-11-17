@@ -1,0 +1,373 @@
+:root {
+  --primary-color: #87ceeb;
+  --secondary-color: #740505;
+  --background-color: #f0d3a6;
+  --font-color1: #fff;
+  --font-color2: #000;
+  --font-primary: 'Roboto', sans-serif;
+  --font-secondary: 'Playfair Display', serif;
+}
+
+body {
+  font-family: var(--font-primary);
+  background: var(--font-color1);
+  color: var(--font-color2);
+  margin: 0;
+  padding: 0;
+}
+/* ------- HEADER LAYOUT -------- */
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: var(--secondary-color);
+  color: var(--font-color1);
+  padding: 1rem;
+  position: relative;
+}
+.logo {
+  width: 90px;
+  height: 100px;
+  border-radius: 10px;
+  margin-right: 0.5rem;
+}
+
+.site-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 2rem;
+  flex-grow: 1;   
+}
+
+.hamburger {
+  background: none;
+  border: none;
+  color: var(--font-color1);
+  font-size: 2rem;
+  cursor: pointer;
+  z-index: 1001;
+}
+.hamburger:hover {
+  background-color: var(--background-color);
+  color: var(--font-color2);
+  transition-duration: 0.3s;
+  
+}
+.hamburger::before {
+  content: "\2630";
+}
+.hamburger.active::before {
+  content: "\2715";
+}
+
+nav {
+  position: absolute;
+  top: 70px;
+  right: 1rem;
+  width: 200px;
+  z-index: 1000;
+}
+
+nav ul {
+  list-style: none;
+  background: var(--secondary-color);
+  border-radius: 8px;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+}
+
+nav ul.open {
+  max-height: 400px;
+  padding-bottom: 0.5rem;
+}
+
+nav ul li {
+  padding: 0.8rem 1rem;
+  text-align: right;
+}
+
+nav a {
+  color: var(--font-color1);
+  text-decoration: none;
+  font-weight: bold;
+}
+nav a:hover{
+  background: var(--primary-color);
+  color: var(--font-color2);
+  font-size: 1.1rem;
+  border-radius: 5px;
+  padding: 0.3rem 0.8rem;
+  transition-duration: 0.3s;
+}
+
+nav .current {
+  background: var(--background-color);
+  color: var(--font-color2);
+  border-radius: 5px;
+  padding: 0.3rem 0.8rem;
+}
+
+main {
+  max-width: 1100px;
+  margin: auto;
+  padding: 2rem 1rem;
+}
+h1, h2 {
+  font-family: 'Playfair Display', serif;
+  color: var(--secondary-color);
+}
+
+/* ------- HOMEPAGE-SPECIFIC LAYOUT -------- */
+/* home.css — homepage specific styles (Option 3 hybrid) */
+
+/* Hero */
+.hero {
+  position: relative;
+  width: 100%;
+  height: 320px;
+  overflow: hidden;
+  border-bottom: 6px solid var(--primary-color);
+}
+
+.hero-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* CTA positioned over hero (wireframe: bottom-right) */
+.cta-button {
+  position: absolute;
+  right: 24px;
+  bottom: 20px;
+  background: var(--secondary-color);
+  color: var(--font-color1);
+  padding: 0.7rem 1rem;
+  border-radius: 8px;
+  text-decoration: none;
+  font-size: 1.2rem;
+  font-weight: 700;
+  box-shadow: 0 6px 14px rgba(116,5,5,0.12);
+  transition: all 0.3s ease;
+}
+.cta-button:hover,
+.cta-button:focus {
+  transform: translateY(-3px);
+  background: var(--primary-color);
+  font-size: 1.5rem;
+  color: var(--font-color2);
+}
+
+/* Page title */
+.page-title {
+  max-width: 1100px;
+  margin: 1.25rem auto;
+  padding: 0 1rem;
+  font-family: var(--font-secondary);
+  color: var(--secondary-color);
+}
+
+/* Info grid: Events | Current Weather | Forecast */
+.info-grid {
+  max-width: 1100px;
+  margin: 0 auto 2rem auto;
+  padding: 0 1rem;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+
+/* common box */
+.box {
+  background: var(--background-color);
+  border: 2px solid var(--secondary-color);
+  border-radius: 6px;
+  overflow: hidden;
+}
+.box h2 {
+  margin: 0;
+  font-size: 1rem;
+  padding: 0.5rem 0.75rem;
+  background: #222; /* dark header in wireframe */
+  color: #fff;
+  font-weight: 700;
+}
+
+/* events styling */
+.events-body {
+  padding: 0.75rem;
+  min-height: 120px;
+  color: var(--font-color2);
+}
+
+/* current weather */
+.current-weather .weather-body {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.75rem;
+}
+.weather-main {
+  text-align: left;
+}
+.weather-temp {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--secondary-color);
+  margin: 0 0 0.25rem;
+}
+.weather-details {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  font-size: 0.95rem;
+  color: var(--font-color2);
+}
+
+/* forecast area. each day block stacked on mobile */
+.forecast-body {
+  padding: 0.75rem;
+  display: grid;
+  gap: 0.5rem;
+}
+.forecast-body div {
+  background: rgba(255,255,255,0.4);
+  padding: 0.5rem;
+  border-radius: 4px;
+  font-weight: 600;
+}
+
+/* Spotlights */
+.spotlights {
+  max-width: 1100px;
+  margin: 1rem auto 3rem auto;
+  padding: 0 1rem;
+}
+.spotlight-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+  margin-top: 0.5rem;
+}
+.spot-card, .spotlight-card {
+  background: var(--background-color);
+  border: 2px solid var(--secondary-color);
+  border-radius: 8px;
+  padding: 0.8rem;
+  text-align: left;
+  display: flex;
+  gap: 0.75rem;
+  align-items: center;
+}
+.spot-card img,
+.spotlight-card img {
+  width: 96px;
+  height: 72px;
+  object-fit: cover;
+  border-radius: 6px;
+  flex: 0 0 96px;
+}
+.spot-card .spot-info {
+  flex: 1;
+}
+.spot-card h3 {
+  margin: 0 0 0.25rem;
+  font-size: 1.05rem;
+  color: var(--secondary-color);
+}
+.spot-card p {
+  margin: 0.125rem 0;
+  font-size: 0.95rem;
+}
+
+
+/* ------- DIRECTORY-SPECIFIC LAYOUT -------- */
+.member-toggle {
+  text-align: right;
+  margin-bottom: 1rem;
+}
+.member-toggle button {
+  background: var(--primary-color);
+  border: none;
+  border-radius: 5px;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  margin-left: 0.5rem;
+  font-weight: bold;
+}
+.member-toggle button:hover {
+  background: var(--background-color);
+}
+
+#members.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1rem;
+}
+#members.list .member-card {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+#members.list img {
+  display: none;
+}
+
+.member-card {
+  border: 2px solid var(--secondary-color);
+  border-radius: 10px;
+  padding: 1rem;
+  background: var(--background-color);
+  text-align: center;
+}
+.member-card img {
+  width: 100%;
+  height: 50%;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+/* ------- FOOTER-LAYOUT -------- */
+footer {
+  background: var(--secondary-color);
+  color: var(--font-color1);
+  text-align: center;
+  padding: 1.5rem;
+  box-sizing: border-box; }
+
+.footer-social img {
+  width: 30px;
+  margin: 0.5rem;
+}
+
+@media (min-width: 768px) {
+  .hamburger {
+    display: none;
+  }
+  nav {
+    position: static;
+    width: auto;
+  }
+  nav ul {
+    display: flex;
+    max-height: none;
+    background: none;
+  }
+  nav ul li {
+    text-align: left;
+  }
+  .hero { 
+    height: 420px; 
+  }
+  .info-grid {
+    grid-template-columns: 2fr 1fr 1fr;
+    align-items: start;
+  }
+  .forecast-body {
+    gap: 0.75rem;
+  }
+  .spotlight-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}

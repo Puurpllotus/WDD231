@@ -5,17 +5,17 @@
     "phone": "555-1234",
     "website": "https://stridosspa.com",
     "image": "estridos-spa.webp",
-    "membership": 3,
-    "description": "Your neighborhood grocery store."
+    "membership": "gold",
+    "description": "Your neighborhood beauty and wellness spa."
   },
   {
     "name": "Take Food",
     "address": "202 Market Ave",
     "phone": "555-5678",
-    "website": "https://brightbank.com",
+    "website": "https://takefood.com",
     "image": "takefood.webp",
-    "membership": 2,
-    "description": "Modern banking solutions."
+    "membership": "silver",
+    "description": "Affordable meals and quick food delivery."
   },
   {
     "name": "Green Gardens",
@@ -23,7 +23,7 @@
     "phone": "555-2468",
     "website": "https://greengardens.com",
     "image": "green-garden.webp",
-    "membership": 1,
+    "membership": "bronze",
     "description": "Landscaping and garden center."
   },
   {
@@ -32,7 +32,7 @@
     "phone": "555-3698",
     "website": "https://techtitans.com",
     "image": "tech-titan.webp",
-    "membership": 3,
+    "membership": "gold",
     "description": "IT consulting and hardware."
   },
   {
@@ -41,7 +41,7 @@
     "phone": "555-6543",
     "website": "https://efcfitness.com",
     "image": "efc-gym.webp",
-    "membership": 2,
+    "membership": "silver",
     "description": "Fitness center for all ages."
   },
   {
@@ -50,7 +50,7 @@
     "phone": "555-8520",
     "website": "https://booknook.com",
     "image": "booknook.webp",
-    "membership": 1,
+    "membership": "bronze",
     "description": "Cozy local bookstore."
   },
   {
@@ -59,7 +59,7 @@
     "phone": "555-7410",
     "website": "https://freshmarket.com",
     "image": "fresh-market.webp",
-    "membership": 1,
-    "description": "Fresh organic Vegetables and fruits."
+    "membership": "silver",
+    "description": "Fresh organic vegetables and fruits."
   }
 ]
