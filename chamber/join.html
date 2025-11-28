@@ -9,16 +9,21 @@
 
     <title>Join the Chamber | Bonny Island Chamber of Commerce</title>
 
-    <link rel="stylesheet" href="styles/chamber.css">
     <link rel="icon" href="images/favicon.ico" type="image/x-icon">
 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto&family=Playfair+Display&display=swap">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&family=Playfair+Display&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="styles/chamber.css">
     <script src="scripts/join.js" defer></script>
 </head>
 
 <body>
     <header>
-        <img src="images/logo-main.webp" alt="Bonny Island Chamber logo" class="logo" lazy="loading">
+        <img src="images/logo-main.webp" alt="Bonny Island Chamber logo" class="logo">
         <span class="site-title">Bonny Island Chamber of Commerce</span>
         <button id="ham-btn" class="hamburger" aria-label="Toggle navigation menu"></button>
 
@@ -101,7 +106,6 @@
                 <div class="card" id="card-np">
                     <h3>NP Membership</h3>
                     <p>For non-profits — free membership</p>
-                    <!-- set type="button" so it never submits and add aria attributes -->
                     <button type="button" data-modal="modal-np" aria-haspopup="dialog" aria-controls="modal-np">View
                         Benefits</button>
                 </div>
