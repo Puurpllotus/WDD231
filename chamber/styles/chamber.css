@@ -494,46 +494,4 @@ footer a:hover {
     .summary dt { font-weight: 700; color: var(--secondary-color); }
     .summary dd { margin: 0 0 0.75rem 0; }
 
-@media (min-width: 768px) {
-  .hamburger {
-    display: none;
-  }
 
-  nav {
-    position: static;
-    width: auto;
-  }
-
-  nav ul {
-    display: flex;
-    max-height: none;
-    background: none;
-  }
-
-  nav ul li {
-    text-align: left;
-  }
-
-  .hero {
-    height: 420px;
-  }
-
-  .info-grid {
-    grid-template-columns: 2fr 1fr 1fr;
-    align-items: start;
-  }
-
-  .spotlight-grid {
-    grid-template-columns: repeat(3, 1fr);
-  }
-
-  .join-container {
-    grid-template-columns: 1fr 1fr;
-  }
-}
-
-@media (max-width: 768px) {
-  .join-container {
-    grid-template-columns: 1fr;
-  }
-}

@@ -1,0 +1,40 @@
+@media (min-width: 768px) {
+  .hamburger {
+    display: none;
+  }
+
+  nav {
+    position: static;
+    width: auto;
+  }
+
+  nav ul {
+    display: flex;
+    max-height: none;
+    background: none;
+  }
+
+  nav ul li {
+    text-align: left;
+  }
+
+  .hero {
+    height: 420px;
+  }
+
+  .info-grid {
+    grid-template-columns: 2fr 1fr 1fr;
+    align-items: start;
+  }
+
+  .spotlight-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .join-container {
+    grid-template-columns: 1fr 1fr;
+  }
+  .join-container {
+    grid-template-columns: 1fr;
+  }
+}
