@@ -126,7 +126,9 @@ async function loadSpotlights() {
       const card = document.createElement('div');
       card.className = 'spot-card';
       card.innerHTML = `
-        <img src="images/${member.image}" alt="${member.name} logo" loading="lazy">
+          <img src="images/${member.image}" 
+          alt="Logo of ${member.name}, a ${member.membership} member"
+          loading="lazy">
         <div class="spot-info">
           <h3>${member.name}</h3>
           <p><strong>${(member.membership || '').toUpperCase()} Member</strong></p>
