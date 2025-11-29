@@ -1,42 +1,54 @@
-const hamburger = document.querySelector(".hamburger");
-const navUL = document.querySelector("nav ul");
+/* CORRECTION: Wrapped navigation logic in DOMContentLoaded so it waits for HTML to load */
+document.addEventListener("DOMContentLoaded", () => {
+  const hamburger = document.getElementById("ham-btn");
+  const navUL = document.querySelector("#nav-bar ul");
 
-if (hamburger && navUL) {
-  hamburger.addEventListener("click", () => {
-    hamburger.classList.toggle("active");
-    navUL.classList.toggle("open");
-  });
+  if (hamburger && navUL) {
+    // Toggle menu
+    hamburger.addEventListener("click", () => {
+      hamburger.classList.toggle("active");
+      navUL.classList.toggle("open");
+    });
+  }
 
+  // Reset menu on window resize
   window.addEventListener("resize", () => {
-    if (window.innerWidth >= 768) {
+    if (window.innerWidth >= 768 && navUL && hamburger) {
       navUL.classList.remove("open");
       hamburger.classList.remove("active");
     }
   });
-}
+});
 
-const footerYear = document.getElementById("currentyear");
-const lastMod = document.getElementById("lastModified");
+/* CORRECTION: Wrapped Footer logic in DOMContentLoaded */
+document.addEventListener("DOMContentLoaded", () => {
+  const footerYear = document.getElementById("currentyear");
+  const lastMod = document.getElementById("lastModified");
 
-if (footerYear) footerYear.textContent = new Date().getFullYear();
-if (lastMod) lastMod.textContent = document.lastModified;
+  if (footerYear) footerYear.textContent = new Date().getFullYear();
+  if (lastMod) lastMod.textContent = document.lastModified;
+});
 
-const gridBtn = document.getElementById("gridView");
-const listBtn = document.getElementById("listView");
-const membersSection = document.getElementById("members");
+/* CORRECTION: Wrapped Grid/List view logic in DOMContentLoaded */
+document.addEventListener("DOMContentLoaded", () => {
+  const gridBtn = document.getElementById("gridView");
+  const listBtn = document.getElementById("listView");
+  const membersSection = document.getElementById("members");
 
-if (gridBtn && listBtn && membersSection) {
-  gridBtn.addEventListener("click", () => {
-    membersSection.classList.add("grid");
-    membersSection.classList.remove("list");
-  });
+  if (gridBtn && listBtn && membersSection) {
+    gridBtn.addEventListener("click", () => {
+      membersSection.classList.add("grid");
+      membersSection.classList.remove("list");
+    });
 
-  listBtn.addEventListener("click", () => {
-    membersSection.classList.add("list");
-    membersSection.classList.remove("grid");
-  });
-}
+    listBtn.addEventListener("click", () => {
+      membersSection.classList.add("list");
+      membersSection.classList.remove("grid");
+    });
+  }
+});
 
+/* Animation Logic */
 document.addEventListener("DOMContentLoaded", () => {
   const cardsContainer = document.querySelector(".membership-cards");
   if (cardsContainer) {
@@ -46,6 +58,7 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 });
 
+/* Timestamp Logic */
 document.addEventListener("DOMContentLoaded", () => {
   const ts = document.getElementById("timestamp");
   if (ts) {
@@ -53,6 +66,7 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 });
 
+/* Modal Logic */
 document.addEventListener("DOMContentLoaded", () => {
   const modalOpeners = document.querySelectorAll("[data-modal]");
   const modals = document.querySelectorAll(".modal");
@@ -83,8 +97,8 @@ document.addEventListener("DOMContentLoaded", () => {
       if (modal) {
         const id = modal.id;
         modal.style.display = "none";
-          modal.setAttribute("aria-hidden", "true");
-          
+        modal.setAttribute("aria-hidden", "true");
+        
         const opener = openerMap.get(id);
         if (opener && typeof opener.focus === "function") opener.focus();
       }
@@ -115,44 +129,50 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
-const joinForm =
-  document.getElementById("joinForm") ||
-  document.getElementById("join-form");
+/* Form Validation Logic */
+document.addEventListener("DOMContentLoaded", () => {
+  const joinForm =
+    document.getElementById("joinForm") ||
+    document.getElementById("join-form");
 
-if (joinForm) {
-  joinForm.addEventListener("submit", (evt) => {
-    const requiredFields = joinForm.querySelectorAll("[required]");
-    for (let field of requiredFields) {
-      if (!field.value.trim()) {
-        evt.preventDefault();
-        alert("Please complete all required fields.");
-        field.focus();
-        return;
+  if (joinForm) {
+    joinForm.addEventListener("submit", (evt) => {
+      const requiredFields = joinForm.querySelectorAll("[required]");
+      for (let field of requiredFields) {
+        if (!field.value.trim()) {
+          evt.preventDefault();
+          alert("Please complete all required fields.");
+          field.focus();
+          return;
+        }
       }
-    }
-  });
+    });
+  }
+});
+
+/* Thank You Page Data Retrieval */
+function getQueryParam(name) {
+  const params = new URLSearchParams(window.location.search);
+  return params.get(name) || '';
 }
-   function getQueryParam(name) {
-      const params = new URLSearchParams(window.location.search);
-      return params.get(name) || '';
-    }
 
-    document.getElementById('currentyear').textContent = new Date().getFullYear();
+/* CORRECTION: Wrapped data output in DOMContentLoaded to prevent errors if elements aren't ready */
+document.addEventListener("DOMContentLoaded", () => {
+  if (document.getElementById('out-firstname')) {
+      document.getElementById('out-firstname').textContent = getQueryParam('firstname');
+      document.getElementById('out-lastname').textContent = getQueryParam('lastname');
+      document.getElementById('out-email').textContent = getQueryParam('email');
+      document.getElementById('out-phone').textContent = getQueryParam('phone');
+      document.getElementById('out-organization').textContent = getQueryParam('organization');
 
-    document.getElementById('out-firstname').textContent = getQueryParam('firstname');
-    document.getElementById('out-lastname').textContent = getQueryParam('lastname');
-    document.getElementById('out-email').textContent = getQueryParam('email');
-    document.getElementById('out-phone').textContent = getQueryParam('phone');
-    document.getElementById('out-organization').textContent = getQueryParam('organization');
-
-    const ts = getQueryParam('timestamp');
-
-    let formatted = ts;
-    if (ts) {
-      try {
-        const d = new Date(ts);
-        if (!isNaN(d)) formatted = d.toLocaleString();
-      } catch (e) {}
-    }
-    document.getElementById('out-timestamp').textContent = formatted;
-    
+      const ts = getQueryParam('timestamp');
+      let formatted = ts;
+      if (ts) {
+        try {
+          const d = new Date(ts);
+          if (!isNaN(d)) formatted = d.toLocaleString();
+        } catch (e) {}
+      }
+      document.getElementById('out-timestamp').textContent = formatted;
+  }
+});

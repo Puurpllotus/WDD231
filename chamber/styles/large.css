@@ -1,40 +1,78 @@
 @media (min-width: 768px) {
-  .hamburger {
-    display: none;
-  }
+    header {
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 1rem 2rem;
+    }
 
-  nav {
-    position: static;
-    width: auto;
-  }
+    .logo {
+        width: 90px;
+    }
 
-  nav ul {
-    display: flex;
-    max-height: none;
-    background: none;
-  }
+    .site-title {
+        font-size: 2rem;
+    }
 
-  nav ul li {
-    text-align: left;
-  }
+    nav {
+        position: static;
+        width: auto;
+    }
 
-  .hero {
-    height: 420px;
-  }
+    nav ul {
+        display: flex;
+        max-height: none;
+        background: none;
+        flex-direction: row;
+        gap: 1rem;
+    }
 
-  .info-grid {
-    grid-template-columns: 2fr 1fr 1fr;
-    align-items: start;
-  }
+    nav ul li {
+        text-align: left;
+        padding: 0;
+        border: none;
+    }
+    
+    .hamburger {
+        display: none;
+    }
 
-  .spotlight-grid {
-    grid-template-columns: repeat(3, 1fr);
-  }
+    /* Hero adjustments */
+    .hero {
+        height: 420px;
+    }
 
-  .join-container {
-    grid-template-columns: 1fr 1fr;
-  }
-  .join-container {
-    grid-template-columns: 1fr;
-  }
+    /* Info grid adjustments */
+    .info-grid {
+        display: grid;
+        grid-template-columns: 2fr 1fr 1fr;
+        gap: 1rem;
+    }
+
+    /* Spotlight grid adjustments */
+    .spotlight-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    /* Join form */
+    .join-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 2rem;
+    }
+
+    /* Member cards layout */
+    #members {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+        gap: 1rem;
+    }
+
+    .member-card {
+        text-align: center;
+        border-radius: 10px;
+        padding: 1rem;
+        background: var(--background-color);
+        border: 2px solid var(--secondary-color);
+    }
 }
